@@ -3,12 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 import myData from  './data.json'
-import helper from './sortHelper.js'
+import help from './sortHelper.js'
 
 class App extends Component {
   render() {
 
-    let result = myData.sort(helper.sortStuff)
+    console.log('start render',help)
+    let result = myData.sort(help.sortModel)
+    console.log('after sort render')
 
     console.log(result);
 

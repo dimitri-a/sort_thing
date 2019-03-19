@@ -1,8 +1,27 @@
-function sortStuff(item1,item2)
+let rankingCommercial = 
+      {
+        'Actual':1,
+        'Projected':2,
+        'Proforma':3
+      }
+
+
+
+    let rankingAgribusiness = 
+    {
+      'Historical':1,
+      'Actual':2,
+      'Projected':3,
+      'Proforma':4
+    }
+    
+export default function sortModel(item1,item2)
 {
-    debugger
-    if (item1.model ==='Commercial' ){
-        if (item1.rank > item2.rank)
+    console.log('start sort function')
+    if (item1.model ==='Commercial'  && item2.model ==='Commercial') {
+
+    
+        if (rankingCommercial[item1.type]> rankingCommercial[item2.type])
         {
             return 1;
         }
@@ -11,8 +30,8 @@ function sortStuff(item1,item2)
         }
     }
 
-    if (item1.model ==='Agribusiness' ){
-        if (item1.rank > item2.rank)
+    if (item1.model ==='Agribusiness' && item2.model ==='Agribusiness' ){
+        if (rankingAgribusiness[item1.rank]> rankingAgribusiness[item2.rank])
         {
             return 1;
         }
@@ -21,6 +40,7 @@ function sortStuff(item1,item2)
         }
     }
 
+
+   
 }
 
-export default sortStuff

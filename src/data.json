@@ -34,23 +34,6 @@
         "model": "Agribusiness",
         "duration": 12,
         "quality": "Audited"
-    },
-    {
-        "id": 3,
-        "businessEntityId": "BE003",
-        "financials": {
-            "Npbt": 2323,
-            "Interest": 123213,
-            "Depreciation": 213123,
-            "Ebit": 1312321,
-            "EbitDa": 123123,
-            "Leasing": 123213
-        },
-        "type": "Actual",
-        "startDate": "2017-06-15T00:00:00.000Z",
-        "endDate": "2017-06-15T00:00:00.000Z",
-        "model": "Agribusiness",
-        "duration": 12,
-        "quality": "Audited"
     }
+  
 ]
