@@ -6,7 +6,6 @@ let rankingCommercial =
       }
 
 
-
     let rankingAgribusiness = 
     {
       'Historical':1,
@@ -20,7 +19,6 @@ export default function sortModel(item1,item2)
     console.log('start sortModel function')
     debugger
     if (item1.model ==='Commercial'  && item2.model ==='Commercial') {
-
     
         if (rankingCommercial[item1.type]> rankingCommercial[item2.type])
         {

@@ -2,18 +2,31 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import myData from  './data.json'
+import myData from './data.json'
 import help from './sortHelper.js'
 
 class App extends Component {
   render() {
 
-    console.log('start render',help)
-    let result = myData.sort(help)
-    console.log('after sort render')
+    console.log('start render', help)
+    var order = {
+      model: { Commercial: 2, Agribusiness: 1 },
+      Actual: { Unqualified: 3, Qualified: 2, Audited: 1 },
+      Projected:{Projection:3,  Qualified: 2, Audited: 1},
+      BOTTOM: Infinity
+    };
 
-    console.log(result);
+    let result = myData.sort(
+      (a, b) => 
+      {
+        // eslint-disable-next-line no-unused-expressions
+        order.model[a.model] - order.model[b.model] || order[a.quality] - order[b.quality]
+      }
+    )
 
+
+
+    console.log(result)
     return (
       <div className="App">
         <header className="App-header">
