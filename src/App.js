@@ -9,21 +9,40 @@ class App extends Component {
   render() {
 
     console.log('start render', help)
-    var order = {
-      model: { Commercial: 2, Agribusiness: 1 },
-      type:{Historical: 3,Actual:2,Projected:1, Proforma:0},
-      Actual: { Unqualified: 3, Qualified: 2, Audited: 1 },
-      Projected: {Projection:3,  Qualified: 2, Audited: 1},
-      BOTTOM: Infinity
-    };
+  
+  
+  var order = {
+    model: {
+      Commercial: 1,
+      Agribusiness: 2
+    },
+    type: {
+      Historical: 1,
+      Actual: 2,
+      Projected: 3,
+      Proforma: 4
+    },
+    Actual: {
+      Unqualified: 1,
+      Qualified: 2,
+      Audited: 3
+    },
+    Projected: {
+      Projection: 3,
+      Qualified: 2,
+      Audited: 1
+    },
+    BOTTOM: Infinity
+  };
+  
+  let result = myData.sort(
+    (a, b) => {
 
-    let result = myData.sort(
-      (a, b) => 
-      {
-        // eslint-disable-next-line no-unused-expressions
-        order.model[a.model] - order.model[b.model] || order.type[a.type] - order.type[b.type]
-      }
-    )
+      return order.model[a.model] - order.model[b.model] || order.type[a.type] - order.type[b.type]
+    }
+  );
+  
+  console.log(result.map((obj) => obj.id))
 
 
 
