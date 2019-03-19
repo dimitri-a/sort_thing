@@ -51,7 +51,7 @@ const mockAggribusinessModel =[
             "EbitDa": 123123,
             "Leasing": 123213
         },
-        "type": "Agribusiness",
+        "type": "Actual",
         "startDate": "2018-06-15T00:00:00.000Z",
         "endDate": "2018-06-15T00:00:00.000Z",
         "model": "Agribusiness",
@@ -69,7 +69,7 @@ const mockAggribusinessModel =[
             "EbitDa": 123123,
             "Leasing": 123213
         },
-        "type": "Agribusiness",
+        "type": "Historical",
         "startDate": "2017-06-15T00:00:00.000Z",
         "endDate": "2017-06-15T00:00:00.000Z",
         "model": "Agribusiness",
@@ -81,19 +81,19 @@ const mockAggribusinessModel =[
 
 describe('sort helper testing', () =>{
 
-    it ("should sort comercial first 1 type",()=>{
+    xit ("should show actual first 1 commercial type",()=>{
         console.log(helper)
-        let result = mockCommercialModel.sort(helper.sort)
+        let result = mockCommercialModel.sort(helper)
 
         expect(result[0].id).toBe(2)
         expect(result[1].id).toBe(1)
 
     })
-    xit ("should sort comercial first mixed types",()=>{
-        let result = mockAggribusinessModel.sort(helper.sortStuff)
+    it ("should show historical first agrimodel",()=>{
+        let result = mockAggribusinessModel.sort(helper)
 
-        expect(result[0].id).toBe(1)
-        expect(result[1].id).toBe(2)
+        expect(result[0].id).toBe(2)
+        expect(result[1].id).toBe(1)
 
     })
 })

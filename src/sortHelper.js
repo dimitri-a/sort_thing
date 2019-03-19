@@ -17,7 +17,8 @@ let rankingCommercial =
     
 export default function sortModel(item1,item2)
 {
-    console.log('start sort function')
+    console.log('start sortModel function')
+    debugger
     if (item1.model ==='Commercial'  && item2.model ==='Commercial') {
 
     
@@ -31,7 +32,7 @@ export default function sortModel(item1,item2)
     }
 
     if (item1.model ==='Agribusiness' && item2.model ==='Agribusiness' ){
-        if (rankingAgribusiness[item1.rank]> rankingAgribusiness[item2.rank])
+        if (rankingAgribusiness[item1.type]> rankingAgribusiness[item2.type])
         {
             return 1;
         }

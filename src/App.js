@@ -9,7 +9,7 @@ class App extends Component {
   render() {
 
     console.log('start render',help)
-    let result = myData.sort(help.sortModel)
+    let result = myData.sort(help)
     console.log('after sort render')
 
     console.log(result);
