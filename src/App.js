@@ -11,8 +11,9 @@ class App extends Component {
     console.log('start render', help)
     var order = {
       model: { Commercial: 2, Agribusiness: 1 },
+      type:{Historical: 3,Actual:2,Projected:1, Proforma:0},
       Actual: { Unqualified: 3, Qualified: 2, Audited: 1 },
-      Projected:{Projection:3,  Qualified: 2, Audited: 1},
+      Projected: {Projection:3,  Qualified: 2, Audited: 1},
       BOTTOM: Infinity
     };
 
@@ -20,9 +21,11 @@ class App extends Component {
       (a, b) => 
       {
         // eslint-disable-next-line no-unused-expressions
-        order.model[a.model] - order.model[b.model] || order[a.quality] - order[b.quality]
+        order[a.type] - order[b.type]
       }
     )
+
+    console.log('hello')
 
 
 
