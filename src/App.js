@@ -21,7 +21,7 @@ class App extends Component {
       (a, b) => 
       {
         // eslint-disable-next-line no-unused-expressions
-        order.model[a.model] - order.model[b.model] || order[a.type.type] - order[b.type.type]
+        order.model[a.model] - order.model[b.model] || order.type[a.type] - order.type[b.type]
       }
     )
 
