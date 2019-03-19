@@ -10,7 +10,7 @@
       "Leasing": 123213
     },
     "type": "Actual",
-    "startDate": "2018-06-15T00:00:00.000Z",
+    "startDate": "12-12-2000",
     "endDate": "2018-06-15T00:00:00.000Z",
     "model": "Commercial",
     "duration": 12,
@@ -27,12 +27,12 @@
       "EbitDa": 123123,
       "Leasing": 123213
     },
-    "type": "Projected",
-    "startDate": "2017-06-15T00:00:00.000Z",
+    "type": "Actual",
+    "startDate": "12-12-2099",
     "endDate": "2017-06-15T00:00:00.000Z",
     "model": "Commercial",
     "duration": 12,
-    "quality": "Projection"
+    "quality": "Qualified"
   },
   {
     "id": 3,
@@ -46,8 +46,8 @@
       "Leasing": 123213
     },
     "type": "Actual",
-    "startDate": "2017-06-15T00:00:00.000Z",
-    "endDate": "2017-06-15T00:00:00.000Z",
+    "startDate": "12-12-1908",
+    "endDate": "2022-06-15T00:00:00.000Z",
     "model": "Commercial",
     "duration": 12,
     "quality": "Audited"
