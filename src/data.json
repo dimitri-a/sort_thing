@@ -12,7 +12,7 @@
     "type": "Actual",
     "startDate": "2018-06-15T00:00:00.000Z",
     "endDate": "2018-06-15T00:00:00.000Z",
-    "model": "Agribusiness",
+    "model": "Commercial",
     "duration": 12,
     "quality": "Unqualified"
   },
@@ -48,7 +48,7 @@
     "type": "Actual",
     "startDate": "2017-06-15T00:00:00.000Z",
     "endDate": "2017-06-15T00:00:00.000Z",
-    "model": "Agribusiness",
+    "model": "Commercial",
     "duration": 12,
     "quality": "Audited"
   }

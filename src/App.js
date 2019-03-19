@@ -28,17 +28,18 @@ class App extends Component {
       Audited: 3
     },
     Projected: {
-      Projection: 3,
+      Projection: 1,
       Qualified: 2,
-      Audited: 1
+      Audited: 3
     },
     BOTTOM: Infinity
   };
   
   let result = myData.sort(
     (a, b) => {
-
-      return order.model[a.model] - order.model[b.model] || order.type[a.type] - order.type[b.type]
+      return order.model[a.model] - order.model[b.model] || 
+      order.type[a.type] - order.type[b.type] ||
+      order.type[a.type][a.quality] - order.type[b.type][b.quality]
     }
   );
   
